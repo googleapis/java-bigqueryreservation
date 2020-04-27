@@ -101,6 +101,10 @@
           <artifactId>maven-dependency-plugin</artifactId>
           <configuration>
             <ignoredUnusedDeclaredDependencies>org.objenesis:objenesis</ignoredUnusedDeclaredDependencies>
+            <ignoredUnusedDeclaredDependencies>com.google.protobuf:protobuf-java</ignoredUnusedDeclaredDependencies>
+            <ignoredUnusedDeclaredDependencies>com.google.api.grpc:proto-google-common-protos</ignoredUnusedDeclaredDependencies>
+            <ignoredUnusedDeclaredDependencies>com.google.api:api-common</ignoredUnusedDeclaredDependencies>
+            <ignoredUnusedDeclaredDependencies>com.google.guava:guava:jar:29.0-android</ignoredUnusedDeclaredDependencies>
           </configuration>
         </plugin>
       </plugins>

@@ -23,10 +23,10 @@ package com.google.cloud.bigquery.reservation.v1;
  *
  * <pre>
  * Capacity commitment is a way to purchase compute capacity for BigQuery jobs
- * (in the form of slots) with some committed period of usage. Monthly and
- * annual commitments renew by default. Only flex commitments can be removed. In
- * order to remove monthly or annual commitments, their plan needs to be changed
- * to flex first.
+ * (in the form of slots) with some committed period of usage. Annual
+ * commitments renew by default. Commitments can be removed after their
+ * commitment end time passes. In order to remove annual commitment, its plan
+ * needs to be changed to monthly or flex first.
  * A capacity commitment resource exists as a child resource of the admin
  * project.
  * </pre>
@@ -214,7 +214,8 @@ public final class CapacityCommitment extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * Monthly commitments have a committed period of 30 days after becoming
-     * ACTIVE.
+     * ACTIVE. After that, they are not in a committed period anymore and can be
+     * removed any time.
      * </pre>
      *
      * <code>MONTHLY = 2;</code>
@@ -225,7 +226,8 @@ public final class CapacityCommitment extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * Annual commitments have a committed period of 365 days after becoming
-     * ACTIVE.
+     * ACTIVE. After that they are converted to a new commitment based on the
+     * renewal_plan.
      * </pre>
      *
      * <code>ANNUAL = 4;</code>
@@ -262,7 +264,8 @@ public final class CapacityCommitment extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * Monthly commitments have a committed period of 30 days after becoming
-     * ACTIVE.
+     * ACTIVE. After that, they are not in a committed period anymore and can be
+     * removed any time.
      * </pre>
      *
      * <code>MONTHLY = 2;</code>
@@ -273,7 +276,8 @@ public final class CapacityCommitment extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * Annual commitments have a committed period of 365 days after becoming
-     * ACTIVE.
+     * ACTIVE. After that they are converted to a new commitment based on the
+     * renewal_plan.
      * </pre>
      *
      * <code>ANNUAL = 4;</code>
@@ -795,7 +799,7 @@ public final class CapacityCommitment extends com.google.protobuf.GeneratedMessa
    * <pre>
    * The plan this capacity commitment is converted to after commitment_end_time
    * passes. Once the plan is changed, committed period is extended according to
-   * commitment plan. Only applicable for MONTHLY and ANNUAL commitments.
+   * commitment plan. Only applicable for ANNUAL commitments.
    * </pre>
    *
    * <code>.google.cloud.bigquery.reservation.v1.CapacityCommitment.CommitmentPlan renewal_plan = 8;
@@ -812,7 +816,7 @@ public final class CapacityCommitment extends com.google.protobuf.GeneratedMessa
    * <pre>
    * The plan this capacity commitment is converted to after commitment_end_time
    * passes. Once the plan is changed, committed period is extended according to
-   * commitment plan. Only applicable for MONTHLY and ANNUAL commitments.
+   * commitment plan. Only applicable for ANNUAL commitments.
    * </pre>
    *
    * <code>.google.cloud.bigquery.reservation.v1.CapacityCommitment.CommitmentPlan renewal_plan = 8;
@@ -1076,10 +1080,10 @@ public final class CapacityCommitment extends com.google.protobuf.GeneratedMessa
    *
    * <pre>
    * Capacity commitment is a way to purchase compute capacity for BigQuery jobs
-   * (in the form of slots) with some committed period of usage. Monthly and
-   * annual commitments renew by default. Only flex commitments can be removed. In
-   * order to remove monthly or annual commitments, their plan needs to be changed
-   * to flex first.
+   * (in the form of slots) with some committed period of usage. Annual
+   * commitments renew by default. Commitments can be removed after their
+   * commitment end time passes. In order to remove annual commitment, its plan
+   * needs to be changed to monthly or flex first.
    * A capacity commitment resource exists as a child resource of the admin
    * project.
    * </pre>
@@ -2050,7 +2054,7 @@ public final class CapacityCommitment extends com.google.protobuf.GeneratedMessa
      * <pre>
      * The plan this capacity commitment is converted to after commitment_end_time
      * passes. Once the plan is changed, committed period is extended according to
-     * commitment plan. Only applicable for MONTHLY and ANNUAL commitments.
+     * commitment plan. Only applicable for ANNUAL commitments.
      * </pre>
      *
      * <code>
@@ -2068,7 +2072,7 @@ public final class CapacityCommitment extends com.google.protobuf.GeneratedMessa
      * <pre>
      * The plan this capacity commitment is converted to after commitment_end_time
      * passes. Once the plan is changed, committed period is extended according to
-     * commitment plan. Only applicable for MONTHLY and ANNUAL commitments.
+     * commitment plan. Only applicable for ANNUAL commitments.
      * </pre>
      *
      * <code>
@@ -2089,7 +2093,7 @@ public final class CapacityCommitment extends com.google.protobuf.GeneratedMessa
      * <pre>
      * The plan this capacity commitment is converted to after commitment_end_time
      * passes. Once the plan is changed, committed period is extended according to
-     * commitment plan. Only applicable for MONTHLY and ANNUAL commitments.
+     * commitment plan. Only applicable for ANNUAL commitments.
      * </pre>
      *
      * <code>
@@ -2114,7 +2118,7 @@ public final class CapacityCommitment extends com.google.protobuf.GeneratedMessa
      * <pre>
      * The plan this capacity commitment is converted to after commitment_end_time
      * passes. Once the plan is changed, committed period is extended according to
-     * commitment plan. Only applicable for MONTHLY and ANNUAL commitments.
+     * commitment plan. Only applicable for ANNUAL commitments.
      * </pre>
      *
      * <code>
@@ -2140,7 +2144,7 @@ public final class CapacityCommitment extends com.google.protobuf.GeneratedMessa
      * <pre>
      * The plan this capacity commitment is converted to after commitment_end_time
      * passes. Once the plan is changed, committed period is extended according to
-     * commitment plan. Only applicable for MONTHLY and ANNUAL commitments.
+     * commitment plan. Only applicable for ANNUAL commitments.
      * </pre>
      *
      * <code>

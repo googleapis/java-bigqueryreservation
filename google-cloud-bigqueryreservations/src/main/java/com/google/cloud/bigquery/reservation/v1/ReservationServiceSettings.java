@@ -110,6 +110,12 @@ public class ReservationServiceSettings extends ClientSettings<ReservationServic
     return ((ReservationServiceStubSettings) getStubSettings()).updateReservationSettings();
   }
 
+  /** Returns the object with the settings used for calls to createCapacityCommitment. */
+  public UnaryCallSettings<CreateCapacityCommitmentRequest, CapacityCommitment>
+      createCapacityCommitmentSettings() {
+    return ((ReservationServiceStubSettings) getStubSettings()).createCapacityCommitmentSettings();
+  }
+
   /** Returns the object with the settings used for calls to listCapacityCommitments. */
   public PagedCallSettings<
           ListCapacityCommitmentsRequest,
@@ -313,6 +319,12 @@ public class ReservationServiceSettings extends ClientSettings<ReservationServic
     public UnaryCallSettings.Builder<UpdateReservationRequest, Reservation>
         updateReservationSettings() {
       return getStubSettingsBuilder().updateReservationSettings();
+    }
+
+    /** Returns the builder for the settings used for calls to createCapacityCommitment. */
+    public UnaryCallSettings.Builder<CreateCapacityCommitmentRequest, CapacityCommitment>
+        createCapacityCommitmentSettings() {
+      return getStubSettingsBuilder().createCapacityCommitmentSettings();
     }
 
     /** Returns the builder for the settings used for calls to listCapacityCommitments. */

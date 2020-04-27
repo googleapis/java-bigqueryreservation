@@ -46,6 +46,7 @@ import com.google.cloud.bigquery.reservation.v1.Assignment;
 import com.google.cloud.bigquery.reservation.v1.BiReservation;
 import com.google.cloud.bigquery.reservation.v1.CapacityCommitment;
 import com.google.cloud.bigquery.reservation.v1.CreateAssignmentRequest;
+import com.google.cloud.bigquery.reservation.v1.CreateCapacityCommitmentRequest;
 import com.google.cloud.bigquery.reservation.v1.CreateReservationRequest;
 import com.google.cloud.bigquery.reservation.v1.DeleteAssignmentRequest;
 import com.google.cloud.bigquery.reservation.v1.DeleteCapacityCommitmentRequest;
@@ -131,6 +132,8 @@ public class ReservationServiceStubSettings extends StubSettings<ReservationServ
       listReservationsSettings;
   private final UnaryCallSettings<GetReservationRequest, Reservation> getReservationSettings;
   private final UnaryCallSettings<UpdateReservationRequest, Reservation> updateReservationSettings;
+  private final UnaryCallSettings<CreateCapacityCommitmentRequest, CapacityCommitment>
+      createCapacityCommitmentSettings;
   private final PagedCallSettings<
           ListCapacityCommitmentsRequest,
           ListCapacityCommitmentsResponse,
@@ -192,6 +195,12 @@ public class ReservationServiceStubSettings extends StubSettings<ReservationServ
   /** Returns the object with the settings used for calls to updateReservation. */
   public UnaryCallSettings<UpdateReservationRequest, Reservation> updateReservationSettings() {
     return updateReservationSettings;
+  }
+
+  /** Returns the object with the settings used for calls to createCapacityCommitment. */
+  public UnaryCallSettings<CreateCapacityCommitmentRequest, CapacityCommitment>
+      createCapacityCommitmentSettings() {
+    return createCapacityCommitmentSettings;
   }
 
   /** Returns the object with the settings used for calls to listCapacityCommitments. */
@@ -338,6 +347,7 @@ public class ReservationServiceStubSettings extends StubSettings<ReservationServ
     listReservationsSettings = settingsBuilder.listReservationsSettings().build();
     getReservationSettings = settingsBuilder.getReservationSettings().build();
     updateReservationSettings = settingsBuilder.updateReservationSettings().build();
+    createCapacityCommitmentSettings = settingsBuilder.createCapacityCommitmentSettings().build();
     listCapacityCommitmentsSettings = settingsBuilder.listCapacityCommitmentsSettings().build();
     getCapacityCommitmentSettings = settingsBuilder.getCapacityCommitmentSettings().build();
     updateCapacityCommitmentSettings = settingsBuilder.updateCapacityCommitmentSettings().build();
@@ -619,6 +629,8 @@ public class ReservationServiceStubSettings extends StubSettings<ReservationServ
         getReservationSettings;
     private final UnaryCallSettings.Builder<UpdateReservationRequest, Reservation>
         updateReservationSettings;
+    private final UnaryCallSettings.Builder<CreateCapacityCommitmentRequest, CapacityCommitment>
+        createCapacityCommitmentSettings;
     private final PagedCallSettings.Builder<
             ListCapacityCommitmentsRequest,
             ListCapacityCommitmentsResponse,
@@ -703,6 +715,8 @@ public class ReservationServiceStubSettings extends StubSettings<ReservationServ
 
       updateReservationSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
 
+      createCapacityCommitmentSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
+
       listCapacityCommitmentsSettings =
           PagedCallSettings.newBuilder(LIST_CAPACITY_COMMITMENTS_PAGE_STR_FACT);
 
@@ -735,6 +749,7 @@ public class ReservationServiceStubSettings extends StubSettings<ReservationServ
               listReservationsSettings,
               getReservationSettings,
               updateReservationSettings,
+              createCapacityCommitmentSettings,
               listCapacityCommitmentsSettings,
               getCapacityCommitmentSettings,
               updateCapacityCommitmentSettings,
@@ -793,6 +808,11 @@ public class ReservationServiceStubSettings extends StubSettings<ReservationServ
 
       builder
           .updateReservationSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("non_idempotent"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
+
+      builder
+          .createCapacityCommitmentSettings()
           .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("non_idempotent"))
           .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
 
@@ -864,6 +884,7 @@ public class ReservationServiceStubSettings extends StubSettings<ReservationServ
       listReservationsSettings = settings.listReservationsSettings.toBuilder();
       getReservationSettings = settings.getReservationSettings.toBuilder();
       updateReservationSettings = settings.updateReservationSettings.toBuilder();
+      createCapacityCommitmentSettings = settings.createCapacityCommitmentSettings.toBuilder();
       listCapacityCommitmentsSettings = settings.listCapacityCommitmentsSettings.toBuilder();
       getCapacityCommitmentSettings = settings.getCapacityCommitmentSettings.toBuilder();
       updateCapacityCommitmentSettings = settings.updateCapacityCommitmentSettings.toBuilder();
@@ -885,6 +906,7 @@ public class ReservationServiceStubSettings extends StubSettings<ReservationServ
               listReservationsSettings,
               getReservationSettings,
               updateReservationSettings,
+              createCapacityCommitmentSettings,
               listCapacityCommitmentsSettings,
               getCapacityCommitmentSettings,
               updateCapacityCommitmentSettings,
@@ -952,6 +974,12 @@ public class ReservationServiceStubSettings extends StubSettings<ReservationServ
     public UnaryCallSettings.Builder<UpdateReservationRequest, Reservation>
         updateReservationSettings() {
       return updateReservationSettings;
+    }
+
+    /** Returns the builder for the settings used for calls to createCapacityCommitment. */
+    public UnaryCallSettings.Builder<CreateCapacityCommitmentRequest, CapacityCommitment>
+        createCapacityCommitmentSettings() {
+      return createCapacityCommitmentSettings;
     }
 
     /** Returns the builder for the settings used for calls to listCapacityCommitments. */

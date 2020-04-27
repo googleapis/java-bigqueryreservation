@@ -1,12 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.google.api.grpc</groupId>
-  <artifactId>proto-google-cloud-bigqueryreservations-v1beta1</artifactId>
-  <version>0.0.1-SNAPSHOT</version><!-- {x-version-update:proto-google-cloud-bigqueryreservations-v1beta1:current} -->
-  <name>proto-google-cloud-bigqueryreservations-v1beta1</name>
-  <description>PROTO library for proto-google-cloud-bigqueryreservations-v1beta1</description>
+  <artifactId>proto-google-cloud-bigqueryreservations-v1</artifactId>
+  <version>0.0.1-SNAPSHOT</version><!-- {x-version-update:proto-google-cloud-bigqueryreservations-v1:current} -->
+  <name>proto-google-cloud-bigqueryreservations-v1</name>
+  <description>PROTO library for proto-google-cloud-bigqueryreservations-v1</description>
   <parent>
     <groupId>com.google.cloud</groupId>
     <artifactId>google-cloud-bigqueryreservations-parent</artifactId>
@@ -34,9 +34,9 @@
   <build>
     <plugins>
       <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>flatten-maven-plugin</artifactId>
-        </plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>flatten-maven-plugin</artifactId>
+      </plugin>
     </plugins>
   </build>
 </project>

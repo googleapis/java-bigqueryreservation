@@ -31,6 +31,7 @@ If you are using Maven with [BOM][libraries-bom], add this to your pom.xml file
   <dependency>
     <groupId>com.google.cloud</groupId>
     <artifactId>google-cloud-bigqueryreservations</artifactId>
+    <version>0.0.0</version>
   </dependency>
 
 ```

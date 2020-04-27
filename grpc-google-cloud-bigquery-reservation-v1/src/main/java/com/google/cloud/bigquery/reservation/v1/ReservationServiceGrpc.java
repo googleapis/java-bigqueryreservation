@@ -291,6 +291,59 @@ public final class ReservationServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<
+          com.google.cloud.bigquery.reservation.v1.CreateCapacityCommitmentRequest,
+          com.google.cloud.bigquery.reservation.v1.CapacityCommitment>
+      getCreateCapacityCommitmentMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateCapacityCommitment",
+      requestType = com.google.cloud.bigquery.reservation.v1.CreateCapacityCommitmentRequest.class,
+      responseType = com.google.cloud.bigquery.reservation.v1.CapacityCommitment.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<
+          com.google.cloud.bigquery.reservation.v1.CreateCapacityCommitmentRequest,
+          com.google.cloud.bigquery.reservation.v1.CapacityCommitment>
+      getCreateCapacityCommitmentMethod() {
+    io.grpc.MethodDescriptor<
+            com.google.cloud.bigquery.reservation.v1.CreateCapacityCommitmentRequest,
+            com.google.cloud.bigquery.reservation.v1.CapacityCommitment>
+        getCreateCapacityCommitmentMethod;
+    if ((getCreateCapacityCommitmentMethod =
+            ReservationServiceGrpc.getCreateCapacityCommitmentMethod)
+        == null) {
+      synchronized (ReservationServiceGrpc.class) {
+        if ((getCreateCapacityCommitmentMethod =
+                ReservationServiceGrpc.getCreateCapacityCommitmentMethod)
+            == null) {
+          ReservationServiceGrpc.getCreateCapacityCommitmentMethod =
+              getCreateCapacityCommitmentMethod =
+                  io.grpc.MethodDescriptor
+                      .<com.google.cloud.bigquery.reservation.v1.CreateCapacityCommitmentRequest,
+                          com.google.cloud.bigquery.reservation.v1.CapacityCommitment>
+                          newBuilder()
+                      .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+                      .setFullMethodName(
+                          generateFullMethodName(SERVICE_NAME, "CreateCapacityCommitment"))
+                      .setSampledToLocalTracing(true)
+                      .setRequestMarshaller(
+                          io.grpc.protobuf.ProtoUtils.marshaller(
+                              com.google.cloud.bigquery.reservation.v1
+                                  .CreateCapacityCommitmentRequest.getDefaultInstance()))
+                      .setResponseMarshaller(
+                          io.grpc.protobuf.ProtoUtils.marshaller(
+                              com.google.cloud.bigquery.reservation.v1.CapacityCommitment
+                                  .getDefaultInstance()))
+                      .setSchemaDescriptor(
+                          new ReservationServiceMethodDescriptorSupplier(
+                              "CreateCapacityCommitment"))
+                      .build();
+        }
+      }
+    }
+    return getCreateCapacityCommitmentMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<
           com.google.cloud.bigquery.reservation.v1.ListCapacityCommitmentsRequest,
           com.google.cloud.bigquery.reservation.v1.ListCapacityCommitmentsResponse>
       getListCapacityCommitmentsMethod;
@@ -1073,6 +1126,20 @@ public final class ReservationServiceGrpc {
      *
      *
      * <pre>
+     * Creates a new capacity commitment resource.
+     * </pre>
+     */
+    public void createCapacityCommitment(
+        com.google.cloud.bigquery.reservation.v1.CreateCapacityCommitmentRequest request,
+        io.grpc.stub.StreamObserver<com.google.cloud.bigquery.reservation.v1.CapacityCommitment>
+            responseObserver) {
+      asyncUnimplementedUnaryCall(getCreateCapacityCommitmentMethod(), responseObserver);
+    }
+
+    /**
+     *
+     *
+     * <pre>
      * Lists all the capacity commitments for the admin project.
      * </pre>
      */
@@ -1365,6 +1432,13 @@ public final class ReservationServiceGrpc {
                       com.google.cloud.bigquery.reservation.v1.Reservation>(
                       this, METHODID_UPDATE_RESERVATION)))
           .addMethod(
+              getCreateCapacityCommitmentMethod(),
+              asyncUnaryCall(
+                  new MethodHandlers<
+                      com.google.cloud.bigquery.reservation.v1.CreateCapacityCommitmentRequest,
+                      com.google.cloud.bigquery.reservation.v1.CapacityCommitment>(
+                      this, METHODID_CREATE_CAPACITY_COMMITMENT)))
+          .addMethod(
               getListCapacityCommitmentsMethod(),
               asyncUnaryCall(
                   new MethodHandlers<
@@ -1571,6 +1645,23 @@ public final class ReservationServiceGrpc {
             responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getUpdateReservationMethod(), getCallOptions()),
+          request,
+          responseObserver);
+    }
+
+    /**
+     *
+     *
+     * <pre>
+     * Creates a new capacity commitment resource.
+     * </pre>
+     */
+    public void createCapacityCommitment(
+        com.google.cloud.bigquery.reservation.v1.CreateCapacityCommitmentRequest request,
+        io.grpc.stub.StreamObserver<com.google.cloud.bigquery.reservation.v1.CapacityCommitment>
+            responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getCreateCapacityCommitmentMethod(), getCallOptions()),
           request,
           responseObserver);
     }
@@ -1975,6 +2066,19 @@ public final class ReservationServiceGrpc {
      *
      *
      * <pre>
+     * Creates a new capacity commitment resource.
+     * </pre>
+     */
+    public com.google.cloud.bigquery.reservation.v1.CapacityCommitment createCapacityCommitment(
+        com.google.cloud.bigquery.reservation.v1.CreateCapacityCommitmentRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getCreateCapacityCommitmentMethod(), getCallOptions(), request);
+    }
+
+    /**
+     *
+     *
+     * <pre>
      * Lists all the capacity commitments for the admin project.
      * </pre>
      */
@@ -2324,6 +2428,21 @@ public final class ReservationServiceGrpc {
      *
      *
      * <pre>
+     * Creates a new capacity commitment resource.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<
+            com.google.cloud.bigquery.reservation.v1.CapacityCommitment>
+        createCapacityCommitment(
+            com.google.cloud.bigquery.reservation.v1.CreateCapacityCommitmentRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getCreateCapacityCommitmentMethod(), getCallOptions()), request);
+    }
+
+    /**
+     *
+     *
+     * <pre>
      * Lists all the capacity commitments for the admin project.
      * </pre>
      */
@@ -2588,19 +2707,20 @@ public final class ReservationServiceGrpc {
   private static final int METHODID_GET_RESERVATION = 2;
   private static final int METHODID_DELETE_RESERVATION = 3;
   private static final int METHODID_UPDATE_RESERVATION = 4;
-  private static final int METHODID_LIST_CAPACITY_COMMITMENTS = 5;
-  private static final int METHODID_GET_CAPACITY_COMMITMENT = 6;
-  private static final int METHODID_DELETE_CAPACITY_COMMITMENT = 7;
-  private static final int METHODID_UPDATE_CAPACITY_COMMITMENT = 8;
-  private static final int METHODID_SPLIT_CAPACITY_COMMITMENT = 9;
-  private static final int METHODID_MERGE_CAPACITY_COMMITMENTS = 10;
-  private static final int METHODID_CREATE_ASSIGNMENT = 11;
-  private static final int METHODID_LIST_ASSIGNMENTS = 12;
-  private static final int METHODID_DELETE_ASSIGNMENT = 13;
-  private static final int METHODID_SEARCH_ASSIGNMENTS = 14;
-  private static final int METHODID_MOVE_ASSIGNMENT = 15;
-  private static final int METHODID_GET_BI_RESERVATION = 16;
-  private static final int METHODID_UPDATE_BI_RESERVATION = 17;
+  private static final int METHODID_CREATE_CAPACITY_COMMITMENT = 5;
+  private static final int METHODID_LIST_CAPACITY_COMMITMENTS = 6;
+  private static final int METHODID_GET_CAPACITY_COMMITMENT = 7;
+  private static final int METHODID_DELETE_CAPACITY_COMMITMENT = 8;
+  private static final int METHODID_UPDATE_CAPACITY_COMMITMENT = 9;
+  private static final int METHODID_SPLIT_CAPACITY_COMMITMENT = 10;
+  private static final int METHODID_MERGE_CAPACITY_COMMITMENTS = 11;
+  private static final int METHODID_CREATE_ASSIGNMENT = 12;
+  private static final int METHODID_LIST_ASSIGNMENTS = 13;
+  private static final int METHODID_DELETE_ASSIGNMENT = 14;
+  private static final int METHODID_SEARCH_ASSIGNMENTS = 15;
+  private static final int METHODID_MOVE_ASSIGNMENT = 16;
+  private static final int METHODID_GET_BI_RESERVATION = 17;
+  private static final int METHODID_UPDATE_BI_RESERVATION = 18;
 
   private static final class MethodHandlers<Req, Resp>
       implements io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2647,6 +2767,13 @@ public final class ReservationServiceGrpc {
           serviceImpl.updateReservation(
               (com.google.cloud.bigquery.reservation.v1.UpdateReservationRequest) request,
               (io.grpc.stub.StreamObserver<com.google.cloud.bigquery.reservation.v1.Reservation>)
+                  responseObserver);
+          break;
+        case METHODID_CREATE_CAPACITY_COMMITMENT:
+          serviceImpl.createCapacityCommitment(
+              (com.google.cloud.bigquery.reservation.v1.CreateCapacityCommitmentRequest) request,
+              (io.grpc.stub.StreamObserver<
+                      com.google.cloud.bigquery.reservation.v1.CapacityCommitment>)
                   responseObserver);
           break;
         case METHODID_LIST_CAPACITY_COMMITMENTS:
@@ -2801,6 +2928,7 @@ public final class ReservationServiceGrpc {
                       .addMethod(getGetReservationMethod())
                       .addMethod(getDeleteReservationMethod())
                       .addMethod(getUpdateReservationMethod())
+                      .addMethod(getCreateCapacityCommitmentMethod())
                       .addMethod(getListCapacityCommitmentsMethod())
                       .addMethod(getGetCapacityCommitmentMethod())
                       .addMethod(getDeleteCapacityCommitmentMethod())

@@ -396,6 +396,52 @@ public class ReservationServiceClientTest {
 
   @Test
   @SuppressWarnings("all")
+  public void createCapacityCommitmentTest() {
+    CapacityCommitmentName name =
+        CapacityCommitmentName.of("[PROJECT]", "[LOCATION]", "[CAPACITY_COMMITMENT]");
+    long slotCount = 191518834L;
+    CapacityCommitment expectedResponse =
+        CapacityCommitment.newBuilder().setName(name.toString()).setSlotCount(slotCount).build();
+    mockReservationService.addResponse(expectedResponse);
+
+    LocationName parent = LocationName.of("[PROJECT]", "[LOCATION]");
+    CapacityCommitment capacityCommitment = CapacityCommitment.newBuilder().build();
+
+    CapacityCommitment actualResponse = client.createCapacityCommitment(parent, capacityCommitment);
+    Assert.assertEquals(expectedResponse, actualResponse);
+
+    List<AbstractMessage> actualRequests = mockReservationService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    CreateCapacityCommitmentRequest actualRequest =
+        (CreateCapacityCommitmentRequest) actualRequests.get(0);
+
+    Assert.assertEquals(parent, LocationName.parse(actualRequest.getParent()));
+    Assert.assertEquals(capacityCommitment, actualRequest.getCapacityCommitment());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  @SuppressWarnings("all")
+  public void createCapacityCommitmentExceptionTest() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(Status.INVALID_ARGUMENT);
+    mockReservationService.addException(exception);
+
+    try {
+      LocationName parent = LocationName.of("[PROJECT]", "[LOCATION]");
+      CapacityCommitment capacityCommitment = CapacityCommitment.newBuilder().build();
+
+      client.createCapacityCommitment(parent, capacityCommitment);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception
+    }
+  }
+
+  @Test
+  @SuppressWarnings("all")
   public void listCapacityCommitmentsTest() {
     String nextPageToken = "";
     CapacityCommitment capacityCommitmentsElement = CapacityCommitment.newBuilder().build();

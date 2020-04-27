@@ -32,6 +32,7 @@ import com.google.cloud.bigquery.reservation.v1.Assignment;
 import com.google.cloud.bigquery.reservation.v1.BiReservation;
 import com.google.cloud.bigquery.reservation.v1.CapacityCommitment;
 import com.google.cloud.bigquery.reservation.v1.CreateAssignmentRequest;
+import com.google.cloud.bigquery.reservation.v1.CreateCapacityCommitmentRequest;
 import com.google.cloud.bigquery.reservation.v1.CreateReservationRequest;
 import com.google.cloud.bigquery.reservation.v1.DeleteAssignmentRequest;
 import com.google.cloud.bigquery.reservation.v1.DeleteCapacityCommitmentRequest;
@@ -144,6 +145,16 @@ public class GrpcReservationServiceStub extends ReservationServiceStub {
               .setRequestMarshaller(
                   ProtoUtils.marshaller(UpdateReservationRequest.getDefaultInstance()))
               .setResponseMarshaller(ProtoUtils.marshaller(Reservation.getDefaultInstance()))
+              .build();
+  private static final MethodDescriptor<CreateCapacityCommitmentRequest, CapacityCommitment>
+      createCapacityCommitmentMethodDescriptor =
+          MethodDescriptor.<CreateCapacityCommitmentRequest, CapacityCommitment>newBuilder()
+              .setType(MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(
+                  "google.cloud.bigquery.reservation.v1.ReservationService/CreateCapacityCommitment")
+              .setRequestMarshaller(
+                  ProtoUtils.marshaller(CreateCapacityCommitmentRequest.getDefaultInstance()))
+              .setResponseMarshaller(ProtoUtils.marshaller(CapacityCommitment.getDefaultInstance()))
               .build();
   private static final MethodDescriptor<
           ListCapacityCommitmentsRequest, ListCapacityCommitmentsResponse>
@@ -277,6 +288,8 @@ public class GrpcReservationServiceStub extends ReservationServiceStub {
       listReservationsPagedCallable;
   private final UnaryCallable<GetReservationRequest, Reservation> getReservationCallable;
   private final UnaryCallable<UpdateReservationRequest, Reservation> updateReservationCallable;
+  private final UnaryCallable<CreateCapacityCommitmentRequest, CapacityCommitment>
+      createCapacityCommitmentCallable;
   private final UnaryCallable<ListCapacityCommitmentsRequest, ListCapacityCommitmentsResponse>
       listCapacityCommitmentsCallable;
   private final UnaryCallable<ListCapacityCommitmentsRequest, ListCapacityCommitmentsPagedResponse>
@@ -438,6 +451,20 @@ public class GrpcReservationServiceStub extends ReservationServiceStub {
                   }
                 })
             .build();
+    GrpcCallSettings<CreateCapacityCommitmentRequest, CapacityCommitment>
+        createCapacityCommitmentTransportSettings =
+            GrpcCallSettings.<CreateCapacityCommitmentRequest, CapacityCommitment>newBuilder()
+                .setMethodDescriptor(createCapacityCommitmentMethodDescriptor)
+                .setParamsExtractor(
+                    new RequestParamsExtractor<CreateCapacityCommitmentRequest>() {
+                      @Override
+                      public Map<String, String> extract(CreateCapacityCommitmentRequest request) {
+                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                        params.put("parent", String.valueOf(request.getParent()));
+                        return params.build();
+                      }
+                    })
+                .build();
     GrpcCallSettings<ListCapacityCommitmentsRequest, ListCapacityCommitmentsResponse>
         listCapacityCommitmentsTransportSettings =
             GrpcCallSettings
@@ -628,6 +655,11 @@ public class GrpcReservationServiceStub extends ReservationServiceStub {
             updateReservationTransportSettings,
             settings.updateReservationSettings(),
             clientContext);
+    this.createCapacityCommitmentCallable =
+        callableFactory.createUnaryCallable(
+            createCapacityCommitmentTransportSettings,
+            settings.createCapacityCommitmentSettings(),
+            clientContext);
     this.listCapacityCommitmentsCallable =
         callableFactory.createUnaryCallable(
             listCapacityCommitmentsTransportSettings,
@@ -724,6 +756,11 @@ public class GrpcReservationServiceStub extends ReservationServiceStub {
 
   public UnaryCallable<UpdateReservationRequest, Reservation> updateReservationCallable() {
     return updateReservationCallable;
+  }
+
+  public UnaryCallable<CreateCapacityCommitmentRequest, CapacityCommitment>
+      createCapacityCommitmentCallable() {
+    return createCapacityCommitmentCallable;
   }
 
   public UnaryCallable<ListCapacityCommitmentsRequest, ListCapacityCommitmentsPagedResponse>

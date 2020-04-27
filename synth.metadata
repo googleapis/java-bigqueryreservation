@@ -3,16 +3,16 @@
     {
       "git": {
         "name": ".",
-        "remote": "sso://devrel/cloud/libraries/java/repo-splitter",
-        "sha": "7e3cf12eef6abffeac8067f0f100537aca3a1cdf"
+        "remote": "https://github.com/googleapis/java-bigqueryreservations.git",
+        "sha": "0c211ed2de16c95b93ae2e45a6bf9ebbe0e1053e"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "2bf9f22da3f101aeb536e1e88fe036323b8e9188",
-        "internalRef": "307654927"
+        "sha": "5dca7f1079a4c127245c0f1dbb8293b434fbd0c8",
+        "internalRef": "308671886"
       }
     },
     {

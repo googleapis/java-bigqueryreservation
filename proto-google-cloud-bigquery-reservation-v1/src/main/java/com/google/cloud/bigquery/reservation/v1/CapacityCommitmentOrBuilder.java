@@ -205,7 +205,7 @@ public interface CapacityCommitmentOrBuilder
    * <pre>
    * The plan this capacity commitment is converted to after commitment_end_time
    * passes. Once the plan is changed, committed period is extended according to
-   * commitment plan. Only applicable for MONTHLY and ANNUAL commitments.
+   * commitment plan. Only applicable for ANNUAL commitments.
    * </pre>
    *
    * <code>.google.cloud.bigquery.reservation.v1.CapacityCommitment.CommitmentPlan renewal_plan = 8;
@@ -220,7 +220,7 @@ public interface CapacityCommitmentOrBuilder
    * <pre>
    * The plan this capacity commitment is converted to after commitment_end_time
    * passes. Once the plan is changed, committed period is extended according to
-   * commitment plan. Only applicable for MONTHLY and ANNUAL commitments.
+   * commitment plan. Only applicable for ANNUAL commitments.
    * </pre>
    *
    * <code>.google.cloud.bigquery.reservation.v1.CapacityCommitment.CommitmentPlan renewal_plan = 8;

@@ -873,6 +873,111 @@ public class ReservationServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD
   /**
+   * Creates a new capacity commitment resource.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (ReservationServiceClient reservationServiceClient = ReservationServiceClient.create()) {
+   *   LocationName parent = LocationName.of("[PROJECT]", "[LOCATION]");
+   *   CapacityCommitment capacityCommitment = CapacityCommitment.newBuilder().build();
+   *   CapacityCommitment response = reservationServiceClient.createCapacityCommitment(parent, capacityCommitment);
+   * }
+   * </code></pre>
+   *
+   * @param parent Required. Resource name of the parent reservation. E.g.,
+   *     projects/myproject/locations/US
+   * @param capacityCommitment Content of the capacity commitment to create.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final CapacityCommitment createCapacityCommitment(
+      LocationName parent, CapacityCommitment capacityCommitment) {
+    CreateCapacityCommitmentRequest request =
+        CreateCapacityCommitmentRequest.newBuilder()
+            .setParent(parent == null ? null : parent.toString())
+            .setCapacityCommitment(capacityCommitment)
+            .build();
+    return createCapacityCommitment(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Creates a new capacity commitment resource.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (ReservationServiceClient reservationServiceClient = ReservationServiceClient.create()) {
+   *   LocationName parent = LocationName.of("[PROJECT]", "[LOCATION]");
+   *   CapacityCommitment capacityCommitment = CapacityCommitment.newBuilder().build();
+   *   CapacityCommitment response = reservationServiceClient.createCapacityCommitment(parent.toString(), capacityCommitment);
+   * }
+   * </code></pre>
+   *
+   * @param parent Required. Resource name of the parent reservation. E.g.,
+   *     projects/myproject/locations/US
+   * @param capacityCommitment Content of the capacity commitment to create.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final CapacityCommitment createCapacityCommitment(
+      String parent, CapacityCommitment capacityCommitment) {
+    CreateCapacityCommitmentRequest request =
+        CreateCapacityCommitmentRequest.newBuilder()
+            .setParent(parent)
+            .setCapacityCommitment(capacityCommitment)
+            .build();
+    return createCapacityCommitment(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Creates a new capacity commitment resource.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (ReservationServiceClient reservationServiceClient = ReservationServiceClient.create()) {
+   *   LocationName parent = LocationName.of("[PROJECT]", "[LOCATION]");
+   *   CreateCapacityCommitmentRequest request = CreateCapacityCommitmentRequest.newBuilder()
+   *     .setParent(parent.toString())
+   *     .build();
+   *   CapacityCommitment response = reservationServiceClient.createCapacityCommitment(request);
+   * }
+   * </code></pre>
+   *
+   * @param request The request object containing all of the parameters for the API call.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final CapacityCommitment createCapacityCommitment(
+      CreateCapacityCommitmentRequest request) {
+    return createCapacityCommitmentCallable().call(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Creates a new capacity commitment resource.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (ReservationServiceClient reservationServiceClient = ReservationServiceClient.create()) {
+   *   LocationName parent = LocationName.of("[PROJECT]", "[LOCATION]");
+   *   CreateCapacityCommitmentRequest request = CreateCapacityCommitmentRequest.newBuilder()
+   *     .setParent(parent.toString())
+   *     .build();
+   *   ApiFuture&lt;CapacityCommitment&gt; future = reservationServiceClient.createCapacityCommitmentCallable().futureCall(request);
+   *   // Do something
+   *   CapacityCommitment response = future.get();
+   * }
+   * </code></pre>
+   */
+  public final UnaryCallable<CreateCapacityCommitmentRequest, CapacityCommitment>
+      createCapacityCommitmentCallable() {
+    return stub.createCapacityCommitmentCallable();
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
    * Lists all the capacity commitments for the admin project.
    *
    * <p>Sample code:

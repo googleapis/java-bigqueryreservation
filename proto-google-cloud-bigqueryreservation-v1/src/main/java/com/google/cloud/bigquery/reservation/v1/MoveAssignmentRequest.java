@@ -192,7 +192,7 @@ public final class MoveAssignmentRequest extends com.google.protobuf.GeneratedMe
    *   `projects/myotherproject/locations/US/reservations/team2-prod`
    * </pre>
    *
-   * <code>string destination_id = 3;</code>
+   * <code>string destination_id = 3 [(.google.api.resource_reference) = { ... }</code>
    *
    * @return The destinationId.
    */
@@ -216,7 +216,7 @@ public final class MoveAssignmentRequest extends com.google.protobuf.GeneratedMe
    *   `projects/myotherproject/locations/US/reservations/team2-prod`
    * </pre>
    *
-   * <code>string destination_id = 3;</code>
+   * <code>string destination_id = 3 [(.google.api.resource_reference) = { ... }</code>
    *
    * @return The bytes for destinationId.
    */
@@ -712,7 +712,7 @@ public final class MoveAssignmentRequest extends com.google.protobuf.GeneratedMe
      *   `projects/myotherproject/locations/US/reservations/team2-prod`
      * </pre>
      *
-     * <code>string destination_id = 3;</code>
+     * <code>string destination_id = 3 [(.google.api.resource_reference) = { ... }</code>
      *
      * @return The destinationId.
      */
@@ -735,7 +735,7 @@ public final class MoveAssignmentRequest extends com.google.protobuf.GeneratedMe
      *   `projects/myotherproject/locations/US/reservations/team2-prod`
      * </pre>
      *
-     * <code>string destination_id = 3;</code>
+     * <code>string destination_id = 3 [(.google.api.resource_reference) = { ... }</code>
      *
      * @return The bytes for destinationId.
      */
@@ -758,7 +758,7 @@ public final class MoveAssignmentRequest extends com.google.protobuf.GeneratedMe
      *   `projects/myotherproject/locations/US/reservations/team2-prod`
      * </pre>
      *
-     * <code>string destination_id = 3;</code>
+     * <code>string destination_id = 3 [(.google.api.resource_reference) = { ... }</code>
      *
      * @param value The destinationId to set.
      * @return This builder for chaining.
@@ -780,7 +780,7 @@ public final class MoveAssignmentRequest extends com.google.protobuf.GeneratedMe
      *   `projects/myotherproject/locations/US/reservations/team2-prod`
      * </pre>
      *
-     * <code>string destination_id = 3;</code>
+     * <code>string destination_id = 3 [(.google.api.resource_reference) = { ... }</code>
      *
      * @return This builder for chaining.
      */
@@ -798,7 +798,7 @@ public final class MoveAssignmentRequest extends com.google.protobuf.GeneratedMe
      *   `projects/myotherproject/locations/US/reservations/team2-prod`
      * </pre>
      *
-     * <code>string destination_id = 3;</code>
+     * <code>string destination_id = 3 [(.google.api.resource_reference) = { ... }</code>
      *
      * @param value The bytes for destinationId to set.
      * @return This builder for chaining.

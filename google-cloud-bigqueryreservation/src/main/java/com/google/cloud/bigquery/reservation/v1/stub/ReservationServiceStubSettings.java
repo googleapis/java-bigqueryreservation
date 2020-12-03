@@ -78,7 +78,6 @@ import com.google.common.collect.Lists;
 import com.google.protobuf.Empty;
 import java.io.IOException;
 import java.util.List;
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.threeten.bp.Duration;
 
@@ -197,7 +196,7 @@ public class ReservationServiceStubSettings extends StubSettings<ReservationServ
 
             @Override
             public Iterable<Reservation> extractResources(ListReservationsResponse payload) {
-              return Objects.isNull(payload.getReservationsList())
+              return payload.getReservationsList() == null
                   ? ImmutableList.<Reservation>of()
                   : payload.getReservationsList();
             }
@@ -242,7 +241,7 @@ public class ReservationServiceStubSettings extends StubSettings<ReservationServ
             @Override
             public Iterable<CapacityCommitment> extractResources(
                 ListCapacityCommitmentsResponse payload) {
-              return Objects.isNull(payload.getCapacityCommitmentsList())
+              return payload.getCapacityCommitmentsList() == null
                   ? ImmutableList.<CapacityCommitment>of()
                   : payload.getCapacityCommitmentsList();
             }
@@ -281,7 +280,7 @@ public class ReservationServiceStubSettings extends StubSettings<ReservationServ
 
             @Override
             public Iterable<Assignment> extractResources(ListAssignmentsResponse payload) {
-              return Objects.isNull(payload.getAssignmentsList())
+              return payload.getAssignmentsList() == null
                   ? ImmutableList.<Assignment>of()
                   : payload.getAssignmentsList();
             }
@@ -321,7 +320,7 @@ public class ReservationServiceStubSettings extends StubSettings<ReservationServ
 
             @Override
             public Iterable<Assignment> extractResources(SearchAssignmentsResponse payload) {
-              return Objects.isNull(payload.getAssignmentsList())
+              return payload.getAssignmentsList() == null
                   ? ImmutableList.<Assignment>of()
                   : payload.getAssignmentsList();
             }

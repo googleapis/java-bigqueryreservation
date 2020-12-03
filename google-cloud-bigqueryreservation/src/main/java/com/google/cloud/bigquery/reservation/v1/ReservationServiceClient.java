@@ -33,7 +33,6 @@ import com.google.protobuf.Empty;
 import com.google.protobuf.FieldMask;
 import java.io.IOException;
 import java.util.List;
-import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
@@ -173,7 +172,7 @@ public class ReservationServiceClient implements BackgroundResource {
       LocationName parent, Reservation reservation, String reservationId) {
     CreateReservationRequest request =
         CreateReservationRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setReservation(reservation)
             .setReservationId(reservationId)
             .build();
@@ -233,7 +232,7 @@ public class ReservationServiceClient implements BackgroundResource {
   public final ListReservationsPagedResponse listReservations(LocationName parent) {
     ListReservationsRequest request =
         ListReservationsRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .build();
     return listReservations(request);
   }
@@ -295,9 +294,7 @@ public class ReservationServiceClient implements BackgroundResource {
    */
   public final Reservation getReservation(ReservationName name) {
     GetReservationRequest request =
-        GetReservationRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
-            .build();
+        GetReservationRequest.newBuilder().setName(name == null ? null : name.toString()).build();
     return getReservation(request);
   }
 
@@ -347,7 +344,7 @@ public class ReservationServiceClient implements BackgroundResource {
   public final void deleteReservation(ReservationName name) {
     DeleteReservationRequest request =
         DeleteReservationRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     deleteReservation(request);
   }
@@ -440,7 +437,7 @@ public class ReservationServiceClient implements BackgroundResource {
       LocationName parent, CapacityCommitment capacityCommitment) {
     CreateCapacityCommitmentRequest request =
         CreateCapacityCommitmentRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setCapacityCommitment(capacityCommitment)
             .build();
     return createCapacityCommitment(request);
@@ -499,7 +496,7 @@ public class ReservationServiceClient implements BackgroundResource {
   public final ListCapacityCommitmentsPagedResponse listCapacityCommitments(LocationName parent) {
     ListCapacityCommitmentsRequest request =
         ListCapacityCommitmentsRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .build();
     return listCapacityCommitments(request);
   }
@@ -563,7 +560,7 @@ public class ReservationServiceClient implements BackgroundResource {
   public final CapacityCommitment getCapacityCommitment(CapacityCommitmentName name) {
     GetCapacityCommitmentRequest request =
         GetCapacityCommitmentRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     return getCapacityCommitment(request);
   }
@@ -616,7 +613,7 @@ public class ReservationServiceClient implements BackgroundResource {
   public final void deleteCapacityCommitment(CapacityCommitmentName name) {
     DeleteCapacityCommitmentRequest request =
         DeleteCapacityCommitmentRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     deleteCapacityCommitment(request);
   }
@@ -738,7 +735,7 @@ public class ReservationServiceClient implements BackgroundResource {
       CapacityCommitmentName name, long slotCount) {
     SplitCapacityCommitmentRequest request =
         SplitCapacityCommitmentRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .setSlotCount(slotCount)
             .build();
     return splitCapacityCommitment(request);
@@ -823,7 +820,7 @@ public class ReservationServiceClient implements BackgroundResource {
       LocationName parent, List<String> capacityCommitmentIds) {
     MergeCapacityCommitmentsRequest request =
         MergeCapacityCommitmentsRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .addAllCapacityCommitmentIds(capacityCommitmentIds)
             .build();
     return mergeCapacityCommitments(request);
@@ -930,7 +927,7 @@ public class ReservationServiceClient implements BackgroundResource {
   public final Assignment createAssignment(ReservationName parent, Assignment assignment) {
     CreateAssignmentRequest request =
         CreateAssignmentRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setAssignment(assignment)
             .build();
     return createAssignment(request);
@@ -1082,7 +1079,7 @@ public class ReservationServiceClient implements BackgroundResource {
   public final ListAssignmentsPagedResponse listAssignments(ReservationName parent) {
     ListAssignmentsRequest request =
         ListAssignmentsRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .build();
     return listAssignments(request);
   }
@@ -1234,9 +1231,7 @@ public class ReservationServiceClient implements BackgroundResource {
    */
   public final void deleteAssignment(AssignmentName name) {
     DeleteAssignmentRequest request =
-        DeleteAssignmentRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
-            .build();
+        DeleteAssignmentRequest.newBuilder().setName(name == null ? null : name.toString()).build();
     deleteAssignment(request);
   }
 
@@ -1351,7 +1346,7 @@ public class ReservationServiceClient implements BackgroundResource {
   public final SearchAssignmentsPagedResponse searchAssignments(LocationName parent, String query) {
     SearchAssignmentsRequest request =
         SearchAssignmentsRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setQuery(query)
             .build();
     return searchAssignments(request);
@@ -1504,8 +1499,8 @@ public class ReservationServiceClient implements BackgroundResource {
   public final Assignment moveAssignment(AssignmentName name, ReservationName destinationId) {
     MoveAssignmentRequest request =
         MoveAssignmentRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
-            .setDestinationId(Objects.isNull(destinationId) ? null : destinationId.toString())
+            .setName(name == null ? null : name.toString())
+            .setDestinationId(destinationId == null ? null : destinationId.toString())
             .build();
     return moveAssignment(request);
   }
@@ -1526,7 +1521,7 @@ public class ReservationServiceClient implements BackgroundResource {
   public final Assignment moveAssignment(AssignmentName name, String destinationId) {
     MoveAssignmentRequest request =
         MoveAssignmentRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .setDestinationId(destinationId)
             .build();
     return moveAssignment(request);
@@ -1549,7 +1544,7 @@ public class ReservationServiceClient implements BackgroundResource {
     MoveAssignmentRequest request =
         MoveAssignmentRequest.newBuilder()
             .setName(name)
-            .setDestinationId(Objects.isNull(destinationId) ? null : destinationId.toString())
+            .setDestinationId(destinationId == null ? null : destinationId.toString())
             .build();
     return moveAssignment(request);
   }
@@ -1610,9 +1605,7 @@ public class ReservationServiceClient implements BackgroundResource {
    */
   public final BiReservation getBiReservation(BiReservationName name) {
     GetBiReservationRequest request =
-        GetBiReservationRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
-            .build();
+        GetBiReservationRequest.newBuilder().setName(name == null ? null : name.toString()).build();
     return getBiReservation(request);
   }
 

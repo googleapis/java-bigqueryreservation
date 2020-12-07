@@ -4,15 +4,15 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/java-bigqueryreservation.git",
-        "sha": "7ccc20cee3988f07bf6541541e018456861614d5"
+        "sha": "597c9f14ee3c2f661c59f46699d304308d85f850"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "7be2c821dd88109038c55c89f7dd48f092eeab9d",
-        "internalRef": "345476969"
+        "sha": "b8b2f8c288cec1f673bf10aa5008819c1576bf2e",
+        "internalRef": "346126713"
       }
     },
     {

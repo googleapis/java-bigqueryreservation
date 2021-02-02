@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.9](https://www.github.com/googleapis/java-bigqueryreservation/compare/v1.0.8...v1.0.9) (2021-02-02)
+
+
+### Documentation
+
+* **samples:** add quickstart sample ([#302](https://www.github.com/googleapis/java-bigqueryreservation/issues/302)) ([7199e0a](https://www.github.com/googleapis/java-bigqueryreservation/commit/7199e0a2d7f7f8b5d03a21fbae96ee7f8828c750))
+
 ### [1.0.8](https://www.github.com/googleapis/java-bigqueryreservation/compare/v1.0.7...v1.0.8) (2021-01-14)
 
 

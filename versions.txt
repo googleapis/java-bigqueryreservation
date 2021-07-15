@@ -2,5 +2,7 @@
 # module:released-version:current-version
 
 google-cloud-bigqueryreservation:1.2.2:1.2.3-SNAPSHOT
-proto-google-cloud-bigqueryreservation-v1:1.2.2:1.2.3-SNAPSHOT
 grpc-google-cloud-bigqueryreservation-v1:1.2.2:1.2.3-SNAPSHOT
+grpc-google-cloud-bigqueryreservation-v1beta1:1.2.2:1.2.3-SNAPSHOT
+proto-google-cloud-bigqueryreservation-v1:1.2.2:1.2.3-SNAPSHOT
+proto-google-cloud-bigqueryreservation-v1beta1:1.2.2:1.2.3-SNAPSHOT

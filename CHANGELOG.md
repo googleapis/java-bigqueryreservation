@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://www.github.com/googleapis/java-bigqueryreservation/compare/v1.2.2...v1.3.0) (2021-08-05)
+
+
+### Features
+
+* configure initial sp version ([#446](https://www.github.com/googleapis/java-bigqueryreservation/issues/446)) ([15c2d36](https://www.github.com/googleapis/java-bigqueryreservation/commit/15c2d36adb2f29623472cacb4b62db8d1558df7b))
+
 ### [1.2.2](https://www.github.com/googleapis/java-bigqueryreservation/compare/v1.2.1...v1.2.2) (2021-06-30)
 
 

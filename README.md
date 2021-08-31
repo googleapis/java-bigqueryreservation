@@ -26,7 +26,7 @@ If you are using Maven, add this to your pom.xml file:
 If you are using Gradle without BOM, add this to your dependencies
 
 ```Groovy
-implementation 'com.google.cloud:google-cloud-bigqueryreservation:2.0.2'
+compile 'com.google.cloud:google-cloud-bigqueryreservation:2.0.2'
 ```
 
 If you are using SBT, add this to your dependencies

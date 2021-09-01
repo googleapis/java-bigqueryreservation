@@ -11,8 +11,8 @@
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "e1738ee972b49fd0c4d4718b035444495142b781",
-        "internalRef": "391407209"
+        "sha": "2c7f233a072ce7acf72a1db871a94a7c3e8ad36e",
+        "internalRef": "394129271"
       }
     },
     {
@@ -166,6 +166,10 @@
     "proto-google-cloud-bigqueryreservation-v1/src/main/java/com/google/cloud/bigquery/reservation/v1/ReservationName.java",
     "proto-google-cloud-bigqueryreservation-v1/src/main/java/com/google/cloud/bigquery/reservation/v1/ReservationOrBuilder.java",
     "proto-google-cloud-bigqueryreservation-v1/src/main/java/com/google/cloud/bigquery/reservation/v1/ReservationProto.java",
+    "proto-google-cloud-bigqueryreservation-v1/src/main/java/com/google/cloud/bigquery/reservation/v1/SearchAllAssignmentsRequest.java",
+    "proto-google-cloud-bigqueryreservation-v1/src/main/java/com/google/cloud/bigquery/reservation/v1/SearchAllAssignmentsRequestOrBuilder.java",
+    "proto-google-cloud-bigqueryreservation-v1/src/main/java/com/google/cloud/bigquery/reservation/v1/SearchAllAssignmentsResponse.java",
+    "proto-google-cloud-bigqueryreservation-v1/src/main/java/com/google/cloud/bigquery/reservation/v1/SearchAllAssignmentsResponseOrBuilder.java",
     "proto-google-cloud-bigqueryreservation-v1/src/main/java/com/google/cloud/bigquery/reservation/v1/SearchAssignmentsRequest.java",
     "proto-google-cloud-bigqueryreservation-v1/src/main/java/com/google/cloud/bigquery/reservation/v1/SearchAssignmentsRequestOrBuilder.java",
     "proto-google-cloud-bigqueryreservation-v1/src/main/java/com/google/cloud/bigquery/reservation/v1/SearchAssignmentsResponse.java",

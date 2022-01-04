@@ -1,5 +1,99 @@
 # Changelog
 
+## [1.0.0](https://github.com/googleapis/java-bigqueryreservation/compare/java-bigqueryreservation-v2.2.0...java-bigqueryreservation-v1.0.0) (2022-01-04)
+
+
+### ⚠ BREAKING CHANGES
+
+* Java 8 breaking generator changes (#453)
+* 1.0.0
+* The C# namespace option will break anyone currently generating C# libraries for this API.
+
+### Features
+
+* add `gcf-owl-bot[bot]` to `ignoreAuthors` ([#401](https://github.com/googleapis/java-bigqueryreservation/issues/401)) ([86ab734](https://github.com/googleapis/java-bigqueryreservation/commit/86ab734f55f61703ee0e6318eaddb0d3f65a5b49))
+* generate sample code in the Java microgenerator ([#316](https://github.com/googleapis/java-bigqueryreservation/issues/316)) ([2906ada](https://github.com/googleapis/java-bigqueryreservation/commit/2906ada0df29eb094c214fd3767efe381a571406))
+* increase the logical timeout (retry deadline) to 5 minutes ([#577](https://github.com/googleapis/java-bigqueryreservation/issues/577)) ([574dcca](https://github.com/googleapis/java-bigqueryreservation/commit/574dcca7941e3b0a5a21c4f5241f9136ee00b6a4))
+* initial code generation ([0c211ed](https://github.com/googleapis/java-bigqueryreservation/commit/0c211ed2de16c95b93ae2e45a6bf9ebbe0e1053e))
+* initial release, update shared-deps ([#12](https://github.com/googleapis/java-bigqueryreservation/issues/12)) ([2e2f838](https://github.com/googleapis/java-bigqueryreservation/commit/2e2f8388db134bd63d2831e875fe1f1a7e01d4f3))
+* Java 8 breaking generator changes ([#453](https://github.com/googleapis/java-bigqueryreservation/issues/453)) ([abe0325](https://github.com/googleapis/java-bigqueryreservation/commit/abe0325237930fed2d53f6b065fba965f13d5be7))
+* new generated features ([9f89c0f](https://github.com/googleapis/java-bigqueryreservation/commit/9f89c0ff63876d02b30acfa3b03d9460ea488a94))
+* promote to 1.0.0 ([#220](https://github.com/googleapis/java-bigqueryreservation/issues/220)) ([2301882](https://github.com/googleapis/java-bigqueryreservation/commit/23018828a800d6b4bcb8cf64ba9f3bda0dcc25e4)), closes [#181](https://github.com/googleapis/java-bigqueryreservation/issues/181)
+* promote to 1.0.0 ([#223](https://github.com/googleapis/java-bigqueryreservation/issues/223)) ([40b10ab](https://github.com/googleapis/java-bigqueryreservation/commit/40b10ab7b64f44191e84a527080bef4bc2950d93))
+* proto changes ([#84](https://github.com/googleapis/java-bigqueryreservation/issues/84)) ([f154e78](https://github.com/googleapis/java-bigqueryreservation/commit/f154e788cbf09fe6c61bcd1b4be55a206c9d021f))
+* trigger release ([#454](https://github.com/googleapis/java-bigqueryreservation/issues/454)) ([28be687](https://github.com/googleapis/java-bigqueryreservation/commit/28be68725ee5b3bd3bc3a6adc4b8363e9fa0624f))
+
+
+### Bug Fixes
+
+* Add `shopt -s nullglob` to dependencies script ([#425](https://github.com/googleapis/java-bigqueryreservation/issues/425)) ([593ab3c](https://github.com/googleapis/java-bigqueryreservation/commit/593ab3cd1d6ba234a69ccbde246f257de67880a2))
+* **java:** add -ntp flag to native image testing command ([#1299](https://github.com/googleapis/java-bigqueryreservation/issues/1299)) ([#573](https://github.com/googleapis/java-bigqueryreservation/issues/573)) ([8e80b7e](https://github.com/googleapis/java-bigqueryreservation/commit/8e80b7e7a9046e7c396807e78804eeeab90d439d))
+* **java:** java 17 dependency arguments ([#1266](https://github.com/googleapis/java-bigqueryreservation/issues/1266)) ([#552](https://github.com/googleapis/java-bigqueryreservation/issues/552)) ([0d3ee41](https://github.com/googleapis/java-bigqueryreservation/commit/0d3ee4152fd77a624ba9995d116cf471106ac4bb))
+* **java:** run Maven in plain console-friendly mode ([#1301](https://github.com/googleapis/java-bigqueryreservation/issues/1301)) ([#583](https://github.com/googleapis/java-bigqueryreservation/issues/583)) ([0748026](https://github.com/googleapis/java-bigqueryreservation/commit/0748026404576c324f98286ced3a6af7a7c18b9c))
+* Provide C# namespace option for consistent capitalization. ([#58](https://github.com/googleapis/java-bigqueryreservation/issues/58)) ([f3a9337](https://github.com/googleapis/java-bigqueryreservation/commit/f3a93375b933410e9ba4584da3334fc735c44c69))
+* release scripts from issuing overlapping phases ([#370](https://github.com/googleapis/java-bigqueryreservation/issues/370)) ([f5023dc](https://github.com/googleapis/java-bigqueryreservation/commit/f5023dc4cc0807dfe5d9bf578ddd0c3c0dd4d808))
+* temporarily disable reporting to unblock releases ([#132](https://github.com/googleapis/java-bigqueryreservation/issues/132)) ([6c103ab](https://github.com/googleapis/java-bigqueryreservation/commit/6c103ab88a665a8a4fe6c8226bed5df5ceff2fec))
+* typo ([#367](https://github.com/googleapis/java-bigqueryreservation/issues/367)) ([5efec69](https://github.com/googleapis/java-bigqueryreservation/commit/5efec6978ad4b21e5cdca6bd1d5ace3fa8c6375a))
+* Update dependencies.sh to not break on mac ([#421](https://github.com/googleapis/java-bigqueryreservation/issues/421)) ([04571a4](https://github.com/googleapis/java-bigqueryreservation/commit/04571a44cb882a570a2b28ae81aa97541e6eeab2))
+
+
+### Documentation
+
+* **samples:** add quickstart sample ([#302](https://github.com/googleapis/java-bigqueryreservation/issues/302)) ([7199e0a](https://github.com/googleapis/java-bigqueryreservation/commit/7199e0a2d7f7f8b5d03a21fbae96ee7f8828c750))
+* update client documentation link ([#104](https://github.com/googleapis/java-bigqueryreservation/issues/104)) ([474312e](https://github.com/googleapis/java-bigqueryreservation/commit/474312e0f16132c7c0c32d94bd79614392e197d6))
+* update CONTRIBUTING.md to include code formatting ([#534](https://github.com/googleapis/java-bigqueryreservation/issues/534)) ([#24](https://github.com/googleapis/java-bigqueryreservation/issues/24)) ([75e0000](https://github.com/googleapis/java-bigqueryreservation/commit/75e000061aee44db3ded1d0b9d1235b0656ccd89))
+* Update proto comments for bigqueryreservation v1 ([#21](https://github.com/googleapis/java-bigqueryreservation/issues/21)) ([8aa0b9f](https://github.com/googleapis/java-bigqueryreservation/commit/8aa0b9f97694c5d9815a492ff0218bea686a74b6))
+
+
+### Dependencies
+
+* bump shared-deps version and add back certain test deps ([#35](https://github.com/googleapis/java-bigqueryreservation/issues/35)) ([9eefaf1](https://github.com/googleapis/java-bigqueryreservation/commit/9eefaf11bb18487714c59a718154519269b125dc))
+* fix build errors ([#5](https://github.com/googleapis/java-bigqueryreservation/issues/5)) ([52941dd](https://github.com/googleapis/java-bigqueryreservation/commit/52941dd5a5f54ec713f12b0b2ab699d1c4974dd6))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.10.0 ([#160](https://github.com/googleapis/java-bigqueryreservation/issues/160)) ([9b1d261](https://github.com/googleapis/java-bigqueryreservation/commit/9b1d261d67117d8e8333e0942dcc3f500e461681))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.10.1 ([#176](https://github.com/googleapis/java-bigqueryreservation/issues/176)) ([fc6e906](https://github.com/googleapis/java-bigqueryreservation/commit/fc6e906b5dca7c807aba8671f252453ddf237058))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.10.2 ([#183](https://github.com/googleapis/java-bigqueryreservation/issues/183)) ([63dbe1b](https://github.com/googleapis/java-bigqueryreservation/commit/63dbe1bf6044efcedda9026d14da098cdc8c421c))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.11.0 ([#191](https://github.com/googleapis/java-bigqueryreservation/issues/191)) ([16fda73](https://github.com/googleapis/java-bigqueryreservation/commit/16fda7334d8d87c492949cac3538951c37cec547))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.12.1 ([#204](https://github.com/googleapis/java-bigqueryreservation/issues/204)) ([4393548](https://github.com/googleapis/java-bigqueryreservation/commit/4393548a2790d46b7e41a58168b35cf0bcdb9c27))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.13.0 ([#208](https://github.com/googleapis/java-bigqueryreservation/issues/208)) ([ea381e0](https://github.com/googleapis/java-bigqueryreservation/commit/ea381e0ebff7da2c12a600ebc4a35606a6c34d34))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.14.1 ([#230](https://github.com/googleapis/java-bigqueryreservation/issues/230)) ([5f600b3](https://github.com/googleapis/java-bigqueryreservation/commit/5f600b34869cec995dfd54d3155c04f816cae317))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.15.0 ([#240](https://github.com/googleapis/java-bigqueryreservation/issues/240)) ([80c60f8](https://github.com/googleapis/java-bigqueryreservation/commit/80c60f8ff18c5ead40d969b3ccc944670b3a851d))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.16.0 ([#262](https://github.com/googleapis/java-bigqueryreservation/issues/262)) ([f33b496](https://github.com/googleapis/java-bigqueryreservation/commit/f33b49680929c3aecc1c497b85fd2c6e15fd11da))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.16.1 ([#273](https://github.com/googleapis/java-bigqueryreservation/issues/273)) ([01f025b](https://github.com/googleapis/java-bigqueryreservation/commit/01f025bca8238e45d3c749d82aeb8fbc600ecf51))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.17.0 ([#279](https://github.com/googleapis/java-bigqueryreservation/issues/279)) ([afc3143](https://github.com/googleapis/java-bigqueryreservation/commit/afc31439e95b6c233165988eb27cb4e6be661d6f))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.17.1 ([#290](https://github.com/googleapis/java-bigqueryreservation/issues/290)) ([3ed63b5](https://github.com/googleapis/java-bigqueryreservation/commit/3ed63b54abeb55a7ab38fc5ac76de319f0e6c5c3))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.18.0 ([#295](https://github.com/googleapis/java-bigqueryreservation/issues/295)) ([b9ceb0d](https://github.com/googleapis/java-bigqueryreservation/commit/b9ceb0d3489140cefa19fee87ce984e44814cb89))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.19.0 ([#325](https://github.com/googleapis/java-bigqueryreservation/issues/325)) ([eec8507](https://github.com/googleapis/java-bigqueryreservation/commit/eec8507eaacb9ec7a83933fe1e54d4a20b8aad65))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.2.0 ([#4](https://github.com/googleapis/java-bigqueryreservation/issues/4)) ([bf33b80](https://github.com/googleapis/java-bigqueryreservation/commit/bf33b80ac37846ef75fbc7680890610ac5fbc74e))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.20.0 ([#334](https://github.com/googleapis/java-bigqueryreservation/issues/334)) ([430609c](https://github.com/googleapis/java-bigqueryreservation/commit/430609c3f5f261e6a10dcf329d8099c1541829e9))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.20.1 ([#345](https://github.com/googleapis/java-bigqueryreservation/issues/345)) ([9949bd6](https://github.com/googleapis/java-bigqueryreservation/commit/9949bd697526658b24e8313b55d92b222f37c4b3))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.21.0 ([#358](https://github.com/googleapis/java-bigqueryreservation/issues/358)) ([fb51d4d](https://github.com/googleapis/java-bigqueryreservation/commit/fb51d4d13010c5d4763e35b48bf76096fa1e85c5))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.21.1 ([#372](https://github.com/googleapis/java-bigqueryreservation/issues/372)) ([1ad9ed7](https://github.com/googleapis/java-bigqueryreservation/commit/1ad9ed78cb6179cfa0ac2b177f0742ac71281726))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.3.1 ([#25](https://github.com/googleapis/java-bigqueryreservation/issues/25)) ([6564fa1](https://github.com/googleapis/java-bigqueryreservation/commit/6564fa15ff9f378de38846c46fb83961ba134849))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.7.0 ([#38](https://github.com/googleapis/java-bigqueryreservation/issues/38)) ([b856c4d](https://github.com/googleapis/java-bigqueryreservation/commit/b856c4dca3577c6b261b88b52c229e985c46062a))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.8.1 ([#57](https://github.com/googleapis/java-bigqueryreservation/issues/57)) ([762c688](https://github.com/googleapis/java-bigqueryreservation/commit/762c68890c311865d1664f51611aa7476d191d3d))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.8.2 ([#77](https://github.com/googleapis/java-bigqueryreservation/issues/77)) ([975533c](https://github.com/googleapis/java-bigqueryreservation/commit/975533c1fcb7d540fea5ba5ae81aaf4eea837bac))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.8.3 ([#90](https://github.com/googleapis/java-bigqueryreservation/issues/90)) ([05b118d](https://github.com/googleapis/java-bigqueryreservation/commit/05b118d42079ad76aba99573ee9b7e7db09131e5))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.8.5 ([#115](https://github.com/googleapis/java-bigqueryreservation/issues/115)) ([8690f63](https://github.com/googleapis/java-bigqueryreservation/commit/8690f63bf04dd8a1ef472febcacbf823e7ca6eb1))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.8.6 ([#120](https://github.com/googleapis/java-bigqueryreservation/issues/120)) ([3dbf742](https://github.com/googleapis/java-bigqueryreservation/commit/3dbf742124bfcff469fddbf5c16d46b5f688ea7c))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.9.0 ([#139](https://github.com/googleapis/java-bigqueryreservation/issues/139)) ([87346b0](https://github.com/googleapis/java-bigqueryreservation/commit/87346b07c52f71b59f7fb4499deadeacbc1e5150))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v1 ([#376](https://github.com/googleapis/java-bigqueryreservation/issues/376)) ([2736ca8](https://github.com/googleapis/java-bigqueryreservation/commit/2736ca8b0e314e1d7d247b2ded79b98d81282a7e))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v1.1.0 ([#388](https://github.com/googleapis/java-bigqueryreservation/issues/388)) ([fbc1a34](https://github.com/googleapis/java-bigqueryreservation/commit/fbc1a34e61f032195a1d6a13b03dcb461d81246b))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v1.2.0 ([#396](https://github.com/googleapis/java-bigqueryreservation/issues/396)) ([73b752c](https://github.com/googleapis/java-bigqueryreservation/commit/73b752c7886b63e6d49871a22335fe0899446608))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v1.3.0 ([#412](https://github.com/googleapis/java-bigqueryreservation/issues/412)) ([7158744](https://github.com/googleapis/java-bigqueryreservation/commit/7158744b59e0dedd6a9d6a560e0430eb41cb5acd))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v1.4.0 ([#427](https://github.com/googleapis/java-bigqueryreservation/issues/427)) ([b98b37d](https://github.com/googleapis/java-bigqueryreservation/commit/b98b37dde1d735006c38216d0c234b81b96eff81))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v2 ([#452](https://github.com/googleapis/java-bigqueryreservation/issues/452)) ([48d4f7c](https://github.com/googleapis/java-bigqueryreservation/commit/48d4f7c527b78e435f6887ad57c16855ccee78eb))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v2.0.1 ([#459](https://github.com/googleapis/java-bigqueryreservation/issues/459)) ([1821dfa](https://github.com/googleapis/java-bigqueryreservation/commit/1821dfabef6561ff5fe00d21120840934c897664))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v2.1.0 ([#469](https://github.com/googleapis/java-bigqueryreservation/issues/469)) ([0f00186](https://github.com/googleapis/java-bigqueryreservation/commit/0f00186c1eb7549f43d166a4cb5601c4c17fd409))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v2.2.0 ([#504](https://github.com/googleapis/java-bigqueryreservation/issues/504)) ([5a78a9e](https://github.com/googleapis/java-bigqueryreservation/commit/5a78a9e0472f1985125d2ce920448b07088996c2))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v2.2.1 ([#525](https://github.com/googleapis/java-bigqueryreservation/issues/525)) ([87ecc88](https://github.com/googleapis/java-bigqueryreservation/commit/87ecc88c9cd077f1f437462d1eb386c996a47676))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v2.3.0 ([#532](https://github.com/googleapis/java-bigqueryreservation/issues/532)) ([a2b01a9](https://github.com/googleapis/java-bigqueryreservation/commit/a2b01a99bb49941fde5e7f991dfb2b4796c57db3))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v2.4.0 ([#547](https://github.com/googleapis/java-bigqueryreservation/issues/547)) ([1a236f4](https://github.com/googleapis/java-bigqueryreservation/commit/1a236f4def628b01e6b6aace8b2fb29fcc36e847))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v2.5.0 ([#562](https://github.com/googleapis/java-bigqueryreservation/issues/562)) ([1fe45bb](https://github.com/googleapis/java-bigqueryreservation/commit/1fe45bb91f66978aefd3effc2b53ef113dcb9967))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v2.5.1 ([#569](https://github.com/googleapis/java-bigqueryreservation/issues/569)) ([56bd3d5](https://github.com/googleapis/java-bigqueryreservation/commit/56bd3d5fb58ef24306d625f98ae6c76e71fe821c))
+* update dependency com.google.truth:truth to v1.1 ([#207](https://github.com/googleapis/java-bigqueryreservation/issues/207)) ([0c4b90f](https://github.com/googleapis/java-bigqueryreservation/commit/0c4b90f5c207ff5507f1b2da6682af12c7ee9f3e))
+* update dependency junit:junit to v4.13.1 ([#184](https://github.com/googleapis/java-bigqueryreservation/issues/184)) ([e4f8dc6](https://github.com/googleapis/java-bigqueryreservation/commit/e4f8dc6f734fc352150d59800f5e05a36e360d09))
+* update googleapis/code-suggester action to v1.8.1 ([#243](https://github.com/googleapis/java-bigqueryreservation/issues/243)) ([b94eb26](https://github.com/googleapis/java-bigqueryreservation/commit/b94eb26912b72be919f86498aabeed20ef35b0a3))
+
 ## [2.2.0](https://www.github.com/googleapis/java-bigqueryreservation/compare/v2.1.4...v2.2.0) (2021-12-27)
 
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.6](https://github.com/googleapis/java-bigqueryreservation/compare/v2.4.5...v2.4.6) (2022-10-04)
+
+
+### Bug Fixes
+
+* update protobuf to v3.21.7 ([d4851cd](https://github.com/googleapis/java-bigqueryreservation/commit/d4851cd8494e83930d0850d29f8e0a858b3972be))
+
 ## [2.4.5](https://github.com/googleapis/java-bigqueryreservation/compare/v2.4.4...v2.4.5) (2022-10-03)
 
 

@@ -25,13 +25,13 @@
 
 
   <dependencies>
-    <!-- [START bigqueryreservations_install_without_bom] -->
+    <!-- [START bigqueryreservation_install_without_bom] -->
     <dependency>
       <groupId>com.google.cloud</groupId>
       <artifactId>google-cloud-bigqueryreservation</artifactId>
       <version>2.4.6</version>
     </dependency>
-    <!-- [END bigqueryreservations_install_without_bom] -->
+    <!-- [END bigqueryreservation_install_without_bom] -->
 
     <dependency>
       <groupId>junit</groupId>
